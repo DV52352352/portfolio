@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=New+Amsterdam&display=swap" rel="stylesheet');
+
+body {
+	font-family: "Be Vietnam Pro", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: large;
+	color: white;
+	margin: 0;
+	background: url('../images/background.png');
+
+}
+
+.homeText {
+	text-align: center;
+	margin: 2em;
+}
+
+.descriptionText h1,
+.descriptionText h3 {
+	margin: 0;
+}
+
+.descriptionText {
+	margin-bottom: 20px;
+}
+
+.homeButton {
+	margin-top: 100px;
+	padding: 0.5em 3em;
+	background-color: rgb(121, 192, 250);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.homeButton {
+	text-decoration: none;
+}
+
+
+#menuToggler {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	background-color: rgb(176, 217, 250);
+	color: white;
+	font-size: 40px;
+	text-align: left;
+	line-height: 1em;
+	padding: 0 1rem;
+	z-index: 2;
+}
+
+.selectedPage {
+	border-bottom: 3px solid rgb(20, 187, 253);
+}
+
+nav {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	opacity: 0;
+	transform: translateX(100vw);
+	transition: transform 0.4s, opacity 0.6s;
+	z-index: 1;
+}
+
+nav a {
+	font-size: 2em;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	color: white;
+	text-align: center;
+	flex-grow: 1;
+}
+
+nav .title {
+	font-weight: bold;
+}
+
+nav.open {
+	background-color: rgb(176, 217, 250);
+	transition: transform 0.4s, opacity 0.2s;
+	transform: none;
+	opacity: 1;
+}
+
+nav.open .selectedPage {
+	border-bottom: transparent;
+}
+
+nav a:hover {
+	color: #57a9ec;
+}
+
+main {
+	/*text-align: center;*/
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+
+}
+
+main section {
+
+	margin: 0em;
+	padding: 2.5em;
+	padding-top: 5em;
+	padding-bottom: 5em;
+
+}
+
+.grids {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	position: relative;
+}
+
+.gridImage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.gridText {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 10px;
+}
+
+.projectsMain {
+	gap: 2em;
+}
+
+.description {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 0;
+	padding-top: 2em;
+	margin-left: 20px;
+	flex: 1;
+	padding-bottom: 2em;
+}
+
+.projectsTitle,
+.projectsDescription {
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+.projectsDescription {
+	max-width: 800px;
+	text-align: left;
+}
+
+.projectGrids {
+	display: grid;
+	grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 2rem;
+	padding: 0;
+}
+
+.projectText {
+	display: flex;
+	gap: 1rem;
+	font-size: small;
+}
+
+.projectGrid h2 {
+	font-size: 15px;
+}
+
+.projectGrid {
+	display: grid;
+	grid-template-rows: auto 1fr;
+	position: relative;
+	max-width: 100%;
+}
+
+.projectGridImage {
+	max-width: 50%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+.listOfprojects {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	padding: 0;
+	gap: 1em;
+	margin-top: 1em;
+}
+
+.projectGridsColumn {
+	display: grid;
+	grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+	padding: 0;
+	gap: 1em;
+	margin: 0;
+}
+
+.projectGridColumn {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 1px;
+}
+
+.projectGridColumnImage {
+	display: flex;
+	width: 100px;
+}
+
+.projectGridColumn a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	grid-column: 1/-1;
+	max-width: 500px;
+	font-size: 15px;
+	gap: 1em;
+}
+
+.projectGridColumn:hover .projectGridColumnImage {
+	filter: brightness(50%);
+}
+
+/* TABLET STYLES */
+
+@media screen and (min-width: 500px) {
+
+	/* applies to screens wider than 499px */
+
+	.projectsMain {
+		padding-left: 0%;
+		padding-right: 0%;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.projectGrids {
+		grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.listOfprojects {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+
+	.projectsMain h1 {
+		font-size: 22px;
+	}
+}
+
+@media screen and (max-width: 501px) {
+	.resultGrid {
+		width: 216px;
+		height: 121.5px;
+		display: grid;
+		grid-template-columns: auto 1fr;
+		position: relative;
+	}
+
+	.projectsMain {
+		padding-left: 0%;
+		padding-right: 0%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+
+	/* applies to screens wider than 1199px */
+	nav {
+		display: flex;
+		flex-direction: row;
+		transform: none;
+		opacity: 1;
+		height: auto;
+		position: static;
+		justify-content: center;
+	}
+
+	nav a {
+		font-size: 1.3em;
+		flex-grow: 0;
+	}
+
+	#menuToggler {
+		display: none;
+	}
+
+	.projectText {
+		font-size: large;
+	}
+
+}
+
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 420px) {
+
+	/* applies to screens wider than 999px */
+
+	.showcasedprojectImages {
+		display: flex;
+		flex-direction: row;
+		gap: 2em;
+	}
+
+	.projectsMain {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
