@@ -318,6 +318,20 @@ main section {
 
 }
 
+@media screen and (max-width: 950px) {
+	.projectText {
+		display: grid;
+		margin: 1em;
+		font-size: 10px;
+	}
+
+	.projectGridImage {
+		max-width: 100%;
+
+		object-fit: contain;
+	}
+}
+
 /* DESKTOP STYLES */
 
 @media screen and (min-width: 420px) {
@@ -333,5 +347,18 @@ main section {
 	.projectsMain {
 		padding-left: 5%;
 		padding-right: 5%;
+	}
+}
+
+/* MOBILE STYLES */
+
+@media screen and (max-width: 447px) {
+	.descriptionText {
+		font-size: 15px;
+	}
+
+	.homeButton {
+		margin-top: 100px;
+		padding: 0.5em 1em;
 	}
 }
