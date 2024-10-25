@@ -1,4 +1,4 @@
-# My Portfolio
+# My Portfolio showcasing my projects
 Website Link: https://dv52352352.github.io/portfolio/
 
 - ✨ Shows the projects I've done
